@@ -25,7 +25,7 @@ span{
     margin: auto;
     height: 12rem;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 750px) {
 
 .navbar{
   font-size: large; 
