@@ -1,31 +1,47 @@
-
-
-
- body {
+body {
 background-color: black;
 color: whitesmoke;
 }
 
+a{
+    color: whitesmoke;
+}
+i:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
 span{
     font-family: cursive;
     color: brown;
 }
 
 .first{
-    height: 55vh;
+    height: 85vh;
    
     padding: 20vh 10vh 10vh 10vh;
 }
 
-.d2{
-    padding: 10px; 
-}
-
 .card{
-    margin: auto;
+    margin:2vh;
     height: 12rem;
 }
+
 @media only screen and (min-width: 600px) {
+    .first{
+       
+       
+        padding: 20vh 20vh 20vh 20vh;
+    }
+
+    .card{
+       margin: auto;
+       margin-bottom: 2vh;
+        height: 12rem;
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
 
 .navbar{
   font-size: large; 
