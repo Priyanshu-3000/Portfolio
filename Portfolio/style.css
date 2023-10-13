@@ -1,0 +1,82 @@
+
+
+
+ body {
+background-color: black;
+color: whitesmoke;
+}
+
+
+a{
+    color: whitesmoke;
+}
+a:hover{
+    color: whitesmoke;
+}
+
+span{
+    font-family: cursive;
+    color: brown;
+}
+
+.first{
+    height: 85vh;
+   
+    padding: 20vh 10vh 10vh 10vh;
+}
+
+.card{
+    margin:2vh;
+    height: 12rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .first{
+       
+       
+        padding:auto;
+    }
+
+    .card{
+       margin: auto;
+       margin-bottom: 2vh;
+        height: 12rem;
+    }
+}
+
+.cw{
+    width: 18rem;
+}
+
+@media only screen and (min-width: 900px) {
+
+.navbar{
+  font-size: large; 
+  padding:15px 40px 10px 50px; 
+}
+
+
+.nav-item{
+   text-size-adjust: 100px;
+    padding-left:15px;
+    padding-right:15px;
+  }
+.first{
+    height: 85vh;
+   
+    padding: 20vh 20vh 20vh 30vh;
+}
+
+}
+
+#tra1 {
+    position: relative;
+    animation-name: animation1;
+    animation-duration:1s;
+}
+
+@keyframes animation1 {
+   from { top: 0px;  }
+  to {top: 200px;
+left: 200px;}
+}
