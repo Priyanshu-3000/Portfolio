@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Topbar from "./Nav";
+import Home from "./Home";
+import Slide from "./Slide";
+import Project from "./Projects";
+
+// import Project from "./component/Projects/Projects";
+import "./App.css";
+import { BoxDataProvider } from "./Data/data"; // Correct import for BoxDataProvider
+import Experience from "./Experience";
+import Contact from "./Contact";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BoxDataProvider>
+        <Topbar />
+        <Home />
+        <Slide />
+        <Experience />
+        <Project />
+        <Contact />
+      </BoxDataProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
