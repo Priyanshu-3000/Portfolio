@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  overflow-x: hidden;
   width: 100vw;
   margin: auto;
   color: white;
@@ -81,6 +82,6 @@ nav div{
 @media screen and (max-width: 00px) {
   .Home {
     padding: 40% 0% 50% 10%;
-    height: 40vh;
+    height: 30vh;
   }
 }

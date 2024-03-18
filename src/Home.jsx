@@ -3,10 +3,10 @@ import { useEffect, useRef } from "react";
 import { Col, Row } from "react-bootstrap";
 import homegif from "./assets/gifs/Home.gif";
 import Typed from "typed.js";
+import anime from "animejs";
 
 const Home = () => {
   const element = useRef(null);
-
   useEffect(() => {
     var typed = new Typed(element.current, {
       strings: [
@@ -26,6 +26,16 @@ const Home = () => {
     });
   });
 
+  useEffect(() => {
+    const ease = anime({
+      targets: ".slideout",
+      translateX: 250,
+      scale: 1,
+      rotate: "1turn",
+    });
+ 
+  }, []); // Empty dependency array ensures this effect runs only once after initial render
+
   return (
     <Row className="Home pt-5" id="home">
       <Col md="6" id="hometext">
@@ -38,7 +48,13 @@ const Home = () => {
         </h1>
       </Col>
       <Col md="6" className="p-5">
-        <img src={homegif} alt="" width="100%" height="60%" />
+        <img
+          className="slideout"
+          src={homegif}
+          alt=""
+          width="100%"
+          height="60%"
+        />
       </Col>
     </Row>
   );
