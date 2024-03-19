@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Col, Row } from "react-bootstrap";
 import homegif from "./assets/gifs/Home.gif";
 import Typed from "typed.js";
@@ -7,6 +6,7 @@ import anime from "animejs";
 
 const Home = () => {
   const element = useRef(null);
+
   useEffect(() => {
     var typed = new Typed(element.current, {
       strings: [
@@ -24,17 +24,26 @@ const Home = () => {
       showCursor: false,
       loop: true,
     });
-  });
 
-  useEffect(() => {
-    const ease = anime({
-      targets: ".slideout",
-      translateX: 250,
-      scale: 1,
-      rotate: "1turn",
-    });
- 
-  }, []); // Empty dependency array ensures this effect runs only once after initial render
+    const animateImage = () => {
+      anime({
+        targets: ".slideout",
+        translateX: 800,
+        scale: 1,
+        zIndex: -1, // Ensure the image appears behind the text
+        rotate: "2turn",
+        duration: 500, // Duration of the animation
+        easing: "easeInOutQuad", // Easing function
+      });
+    };
+
+    const intervalId = setInterval(animateImage, 300); // Call animateImage function every 3 seconds
+
+    return () => {
+      clearInterval(intervalId); // Cleanup: clear the interval when the component unmounts
+      typed.destroy(); // Cleanup: destroy the Typed.js instance
+    };
+  }, []);
 
   return (
     <Row className="Home pt-5" id="home">
@@ -46,14 +55,11 @@ const Home = () => {
         <h1>
           I'M A <span ref={element} />
         </h1>
-      </Col>
-      <Col md="6" className="p-5">
         <img
           className="slideout"
           src={homegif}
           alt=""
-          width="100%"
-          height="60%"
+          style={{ position: "absolute", top: 120, left: 400, zIndex: -1 }} // Position the image absolutely and set z-index
         />
       </Col>
     </Row>

@@ -4,7 +4,7 @@ import { TbDeviceComputerCamera } from "react-icons/tb";
 export default function Experience() {
   const [section, setsection] = useState("experience");
   return (
-    <div className="component" id="Experience">
+    <div className="component p-5" id="Experience">
       <div className="pb-5">
         <button
           className={
@@ -30,9 +30,9 @@ export default function Experience() {
         <div className="row m-auto">
           <div className="col-md-5 col-sm-5">
             <div className="card " style={{ maxwidth: "18rem" }}>
-              <h6 className="ps-3 pt-3">Software Developer</h6>
               <div className="card-body" style={{ color: "#fbfbfb" }}>
-                <h5 className="card-title">TAG Assessors Guild Pvt. Ltd.</h5>
+                <h5>Software Developer</h5>
+                <h3 className="card-title">TAG Assessors Guild Pvt. Ltd.</h3>
                 <p className="card-text">Febuary 2024 - Present</p>
 
                 <li>
@@ -64,12 +64,12 @@ export default function Experience() {
 
           <div className="col-md-5 col-sm-5"></div>
 
-          <div className="col-md-2 col-sm-none text-center">
+          <div className="col-md-2 d-none d-sm-block text-center">
             <div
               className="mx-auto h-50"
               style={{ height: "50px", width: "2px", backgroundColor: "white" }}
             ></div>
-            <TbDeviceComputerCamera size="25px" />
+            <TbDeviceComputerCamera className="" size="25px" />
             <div
               className="mx-auto h-50"
               style={{ height: "50px", width: "2px", backgroundColor: "white" }}
@@ -77,9 +77,8 @@ export default function Experience() {
           </div>
           <div className="col-md-5 col-sm-5">
             <div className="card " style={{ maxwidth: "18rem" }}>
-              <h6 className="ps-3 pt-3">Freelancing</h6>
               <div className="card-body" style={{ color: "#fbfbfb" }}>
-                <h5 className="card-title"></h5>
+                <h4>Freelancing</h4>
                 <p className="card-text">November 2023 - Febuary 2024</p>
 
                 <li>
@@ -98,9 +97,9 @@ export default function Experience() {
           </div>
           <div className="col-md-5 col-sm-5">
             <div className="card " style={{ maxwidth: "18rem" }}>
-              <h6 className="ms-3 mt-3">Web Developer </h6>
               <div className="card-body" style={{ color: "#fbfbfb" }}>
-                <h5 className="card-title">Dogma Soft Ltd.</h5>
+                <h5>Web Developer </h5>
+                <h3 className="card-title">Dogma Soft Ltd.</h3>
                 <p className="card-text">Augest 2023 - November 2023</p>
 
                 <li>
@@ -132,10 +131,18 @@ export default function Experience() {
         <div className="row m-auto">
           <div className="col-md-5 col-sm-5">
             <div className="card m-3" style={{ maxwidth: "18rem" }}>
-              <div className="card-header">B.C.A</div>
               <div className="card-body">
-                <h5 className="card-title">Tag Assesor private Ltd.</h5>
-                <p className="card-text"> feb 2024 - current</p>
+                <h5>Undergraduate Studies (Bachelor's Degree)</h5>
+                <h3>B.C.A (Bachelor of Computer Applications)</h3>
+                <h4 className="card-title">Suresh Gyan Vihar University</h4>
+                <p className="card-text"> August 2021 - July 2024</p>
+                <p className="fs-5">
+                  Continuing my academic journey at University, I focused my
+                  studies on web and app development. Throughout my
+                  undergraduate years, I delved deep into languages such as
+                  JavaScript (JS), PHP, and MySQL, gaining practical experience
+                  through various projects and activities.
+                </p>
               </div>
             </div>
           </div>
@@ -162,10 +169,19 @@ export default function Experience() {
           </div>
           <div className="col-md-5 col-sm-5">
             <div className="card m-3" style={{ maxwidth: "18rem" }}>
-              <div className="card-header">Web Developer</div>
               <div className="card-body">
-                <h5 className="card-title">Dogma Soft Ltd.</h5>
-                <p className="card-text">Augest 2023 - November 2023</p>
+                <h5>High School (Till 12th Grade)</h5>
+                <h3></h3>
+                <h4 className="card-title">Jaipur Ambridge Academy</h4>
+                <p className="card-text">July 2021</p>
+                <p className="fs-5">
+                  During my secondary education I cultivated a profound interest
+                  in computer science, particularly in programming languages.
+                  Through focused study during the 11th and 12th grades, I
+                  acquired foundational knowledge in languages such as C and
+                  C++, laying a solid groundwork for my subsequent academic
+                  pursuits
+                </p>
               </div>
             </div>
           </div>
