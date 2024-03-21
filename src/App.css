@@ -1,3 +1,23 @@
+/* App.css */
+
+/* Light Mode Styles */
+.light-mode {
+  /* Define your light mode styles here */
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  /* Define your dark mode styles here */
+  background-color: #000000;
+  color: white;
+}
+
+.topbar button {
+  background-color: transparent; /* Set background to transparent */
+  border: none; /* Remove button border if needed */
+}
 body {
   background-color: black;
   overflow-x: hidden;

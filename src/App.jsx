@@ -1,27 +1,30 @@
-import React from "react";
+// App.js
+import React, { createContext, useState, useContext } from "react";
 import Topbar from "./Nav";
 import Home from "./Home";
 import Slide from "./Slide";
 import Project from "./Projects";
-
-// import Project from "./component/Projects/Projects";
-import "./App.css";
-import { BoxDataProvider } from "./Data/data"; // Correct import for BoxDataProvider
+import "./App.css"; // Correct import for ThemeProvider
 import Experience from "./Experience";
 import Contact from "./Contact";
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
-    <>
-      <BoxDataProvider>
-        <Topbar />
-        <Home />
-        <Slide />
-        <Experience />
-        <Project />
-        <Contact />
-      </BoxDataProvider>
-    </>
+    <div className={isDarkMode ? "dark-mode" : "light-mode"}>
+      
+      <Topbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+      <Home />
+      <Slide />
+      <Experience />
+      <Project />
+      <Contact />
+    </div>
   );
 }
 
