@@ -2,7 +2,6 @@
 import React from "react";
 import { Container, Nav, Navbar, Form } from "react-bootstrap";
 import { FaMoon, FaRegSun } from "react-icons/fa";
-import { CiSun } from "react-icons/ci";
 import { useTheme } from "./ThemeContext";
 
 export default function Topbar({ toggleDarkMode, isDarkMode }) {
@@ -25,7 +24,11 @@ export default function Topbar({ toggleDarkMode, isDarkMode }) {
               onClick={toggleDarkMode}
               style={{ background: "transparent" }}
             >
-              {isDarkMode ? <CiSun color="white" /> : <FaMoon color="white" />}
+              {isDarkMode ? (
+                <FaRegSun color="white" />
+              ) : (
+                <FaMoon color="white" />
+              )}
             </button>
           </div>
         </Navbar.Collapse>
