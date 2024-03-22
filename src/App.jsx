@@ -17,11 +17,10 @@ function App() {
 
   return (
     <div className={isDarkMode ? "dark-mode" : "light-mode"}>
-      
       <Topbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <Home />
       <Slide />
-      <Experience />
+      <Experience isDarkMode={isDarkMode} />
       <Project />
       <Contact />
     </div>

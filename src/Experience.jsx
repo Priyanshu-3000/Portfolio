@@ -1,7 +1,7 @@
 import { useState, Reaact } from "react";
 import { TbDeviceComputerCamera } from "react-icons/tb";
 
-export default function Experience() {
+const Experience = ({ isDarkMode }) => {
   const [section, setsection] = useState("experience");
   return (
     <div className="component p-5" id="Experience">
@@ -27,10 +27,14 @@ export default function Experience() {
       </div>
       {/* this is expriance section */}
       {section === "experience" && (
-        <div className="row m-auto">
+        <div className={`row m-auto`}>
           <div className="col-md-5 col-sm-5">
-            <div className="card " style={{ maxwidth: "18rem" }}>
-              <div className="card-body" style={{ color: "#fbfbfb" }}>
+            <div
+              className={`card mb-5 ${
+                isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
+              }`}
+            >
+              <div className="card-body">
                 <h5>Software Developer</h5>
                 <h3 className="card-title">TAG Assessors Guild Pvt. Ltd.</h3>
                 <p className="card-text">Febuary 2024 - Present</p>
@@ -49,35 +53,44 @@ export default function Experience() {
               </p>
             </div>
           </div>
-          <div className="col-md-2 col-sm-none text-center">
+          <div className="col-md-2 col-sm-none  d-none d-sm-block text-center">
             <div
-              className="mx-auto h-50"
-              style={{ height: "50px", width: "2px", backgroundColor: "white" }}
+              className={`mx-auto h-50 ${isDarkMode ? "bg-light" : "bg-dark "}`}
+              style={{ height: "50px", width: "2px" }}
             ></div>
-            <TbDeviceComputerCamera size="25px" />
+
+            <TbDeviceComputerCamera className="mx-auto" size="25px" />
             <div
-              className="mx-auto h-50"
-              style={{ height: "50px", width: "2px", backgroundColor: "white" }}
+              className={`mx-auto h-50  ${
+                isDarkMode ? "bg-light" : "bg-dark "
+              }`}
+              style={{ height: "50px", width: "2px" }}
             ></div>
           </div>
           <div className="col-md-5 col-sm-5"></div>
 
           <div className="col-md-5 col-sm-5"></div>
 
-          <div className="col-md-2 d-none d-sm-block text-center">
+          <div className="col-md-2 col-sm-none d-none d-sm-block text-center">
             <div
-              className="mx-auto h-50"
-              style={{ height: "50px", width: "2px", backgroundColor: "white" }}
+              className={`mx-auto h-50  ${
+                isDarkMode ? "bg-light" : "bg-dark "
+              }`}
+              style={{ height: "50px", width: "2px" }}
             ></div>
-            <TbDeviceComputerCamera className="" size="25px" />
+            <TbDeviceComputerCamera className="mx-auto " size="25px" />
             <div
-              className="mx-auto h-50"
-              style={{ height: "50px", width: "2px", backgroundColor: "white" }}
+              className={`mx-auto h-50 ${isDarkMode ? "bg-light" : "bg-dark "}`}
+              style={{ height: "50px", width: "2px" }}
             ></div>
           </div>
           <div className="col-md-5 col-sm-5">
-            <div className="card " style={{ maxwidth: "18rem" }}>
-              <div className="card-body" style={{ color: "#fbfbfb" }}>
+            <div
+              className={`card mb-5 ${
+                isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
+              }`}
+            >
+              <div className="card-body">
                 <h4>Freelancing</h4>
                 <p className="card-text">November 2023 - Febuary 2024</p>
 
@@ -96,8 +109,12 @@ export default function Experience() {
             </div>
           </div>
           <div className="col-md-5 col-sm-5">
-            <div className="card " style={{ maxwidth: "18rem" }}>
-              <div className="card-body" style={{ color: "#fbfbfb" }}>
+            <div
+              className={`card mb-5 ${
+                isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
+              }`}
+            >
+              <div className="card-body">
                 <h5>Web Developer </h5>
                 <h3 className="card-title">Dogma Soft Ltd.</h3>
                 <p className="card-text">Augest 2023 - November 2023</p>
@@ -116,11 +133,13 @@ export default function Experience() {
               </p>
             </div>
           </div>
-          <div className="col-md-2 col-sm-2 text-center">
+          <div className="col-md-2 d-none d-sm-block col-sm-2 text-center">
             <div
-              className="mx-auto  h-75"
-              style={{ height: "50px", width: "2px", backgroundColor: "white" }}
-            ></div>
+              className={`mx-auto h-50  ${
+                isDarkMode ? "bg-light" : "bg-dark "
+              }`}
+              style={{ height: "50px", width: "2px" }}
+            ></div>{" "}
             <TbDeviceComputerCamera size="25px" />
           </div>
           <div className="col-md-5 col-sm-5"></div>
@@ -130,7 +149,11 @@ export default function Experience() {
       {section === "education" && (
         <div className="row m-auto">
           <div className="col-md-5 col-sm-5">
-            <div className="card m-3" style={{ maxwidth: "18rem" }}>
+            <div
+              className={`card mb-5 ${
+                isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
+              }`}
+            >
               <div className="card-body">
                 <h5>Undergraduate Studies (Bachelor's Degree)</h5>
                 <h3>B.C.A (Bachelor of Computer Applications)</h3>
@@ -146,29 +169,40 @@ export default function Experience() {
               </div>
             </div>
           </div>
-          <div className="col-md-2 col-sm-2 text-center">
+          <div className="col-md-2 col-sm-none d-none d-sm-block text-center">
             <div
-              className="mx-auto h-50"
-              style={{ height: "50px", width: "2px", backgroundColor: "white" }}
+              className={`mx-auto h-50  ${
+                isDarkMode ? "bg-light" : "bg-dark "
+              }`}
+              style={{ height: "50px", width: "2px" }}
             ></div>
-            <TbDeviceComputerCamera size="25px" />
+
+            <TbDeviceComputerCamera className="mx-auto" size="25px" />
             <div
-              className="mx-auto h-50"
-              style={{ height: "50px", width: "2px", backgroundColor: "white" }}
+              className={`mx-auto h-50  ${
+                isDarkMode ? "bg-light" : "bg-dark "
+              }`}
+              style={{ height: "50px", width: "2px" }}
             ></div>
           </div>
           <div className="col-md-5 col-sm-5"></div>
 
           <div className="col-md-5 col-sm-5"></div>
-          <div className="col-md-2 col-sm-2 text-center">
+          <div className="col-md-2 col-sm-none d-none d-sm-block text-center">
             <div
-              className="mx-auto  h-75"
-              style={{ height: "50px", width: "2px", backgroundColor: "white" }}
+              className={`mx-auto h-50  ${
+                isDarkMode ? "bg-light" : "bg-dark "
+              }`}
+              style={{ height: "50px", width: "2px" }}
             ></div>
             <TbDeviceComputerCamera size="25px" />
           </div>
           <div className="col-md-5 col-sm-5">
-            <div className="card m-3" style={{ maxwidth: "18rem" }}>
+            <div
+              className={`card mb-5 ${
+                isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
+              }`}
+            >
               <div className="card-body">
                 <h5>High School (Till 12th Grade)</h5>
                 <h3></h3>
@@ -189,4 +223,6 @@ export default function Experience() {
       )}
     </div>
   );
-}
+};
+
+export default Experience;

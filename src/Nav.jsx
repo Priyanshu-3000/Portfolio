@@ -9,7 +9,6 @@ export default function Topbar({ toggleDarkMode, isDarkMode }) {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand href="#home">Priyanshu</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
@@ -19,19 +18,18 @@ export default function Topbar({ toggleDarkMode, isDarkMode }) {
             <Nav.Link href="#Resume">Resume</Nav.Link>
             <Nav.Link href="#About">About</Nav.Link>
           </Nav>
-          <div className="topbar">
-            <button
-              onClick={toggleDarkMode}
-              style={{ background: "transparent" }}
-            >
-              {isDarkMode ? (
-                <FaRegSun color="white" />
-              ) : (
-                <FaMoon color="white" />
-              )}
-            </button>
-          </div>
         </Navbar.Collapse>
+
+        <div className="topbar">
+          <button
+            onClick={toggleDarkMode}
+            style={{ background: "transparent" }}
+          >
+            {isDarkMode ? <FaRegSun color="white" /> : <FaMoon color="white" />}
+          </button>
+        </div>
+
+        <Navbar.Toggle aria-controls="navbar-nav" />
       </Container>
     </Navbar>
   );
