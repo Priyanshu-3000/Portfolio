@@ -61,7 +61,7 @@ function Project() {
       <Row xs={1} md={3} className="g-4 p-5">
         {data.map((item, idx) => (
           <Col key={idx} className="p-3">
-            <Card>
+            <Card className="popup">
               <Card.Img
                 variant="top"
                 src={item.img}
